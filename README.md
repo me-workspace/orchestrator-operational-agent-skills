@@ -27,13 +27,14 @@ It is more than a pile of prompts. Every skill is a checklist, rubric, or decisi
 ## Quick start (Claude Code)
 
 ```bash
-git clone https://github.com/me-workspace/agent-skills.git
+git clone https://github.com/me-workspace/orchestrator-operational-agent-skills.git
+cd orchestrator-operational-agent-skills
 
 # One skill, project-scoped
-cp -r agent-skills/marketing-growth  .claude/skills/
+cp -r marketing-growth  /path/to/your-project/.claude/skills/
 
 # Or install a role loadout, globally
-cp -r agent-skills/{prd-creator,project-timeline-creator,strategic-approach,admin-ops}  ~/.claude/skills/
+cp -r prd-creator project-timeline-creator strategic-approach admin-ops  ~/.claude/skills/
 ```
 
 The next time a matching request comes in ("write a campaign brief", "draft a PRD", "review this diff"), the agent loads the skill automatically.
