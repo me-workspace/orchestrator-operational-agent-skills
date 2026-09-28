@@ -26,6 +26,6 @@ A good skill is a **procedure**, not an essay. Before you open a PR, check:
 3. Test the trigger: run 5 to 10 realistic prompts and confirm the skill fires when it should and stays quiet when it should not.
 4. Open the PR with a short note on what changed and why.
 
-Good first contributions: an English translation of [`AGENTS.md`](./AGENTS.md), adapting the tax and compliance skills to other jurisdictions, or new operational skills.
+Good first contributions: adapting the tax and compliance skills to other jurisdictions, or new operational skills.
 
 By contributing you agree your work is released under the [MIT License](./LICENSE).

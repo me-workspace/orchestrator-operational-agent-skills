@@ -87,7 +87,7 @@ The next time a matching request comes in ("write a campaign brief", "draft a PR
 
 ## Compose them into a team
 
-[`AGENTS.md`](./AGENTS.md) is a full worked design: which skills go on which agent, why the roles are split the way they are (an auditor should not audit its own work; finance data stays isolated from public-facing agents), and how to run it day to day. It also gives a lean 5-agent option. (Written in Indonesian; an English version is welcome as a PR.)
+[`AGENTS.md`](./AGENTS.md) is a full worked design: which skills go on which agent, why the roles are split the way they are (an auditor should not audit its own work; finance data stays isolated from public-facing agents), and how to run it day to day. It also gives a lean 5-agent option. (Indonesian version: [AGENTS.id.md](./AGENTS.id.md).)
 
 ## How a skill works
 
