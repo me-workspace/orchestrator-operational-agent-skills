@@ -21,7 +21,7 @@ A good skill is a **procedure**, not an essay. Before you open a PR, check:
 
 ## Workflow
 
-1. Fork and branch from `master`.
+1. Fork and branch from `main`.
 2. Add or edit one skill per PR where possible; keep diffs focused.
 3. Test the trigger: run 5 to 10 realistic prompts and confirm the skill fires when it should and stays quiet when it should not.
 4. Open the PR with a short note on what changed and why.

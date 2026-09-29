@@ -11,7 +11,7 @@ An Indonesian version of this document is at [AGENTS.id.md](./AGENTS.id.md).
 ## Division principles (why not one all-knowing agent, and not one agent per skill)
 
 1. **Context limit and triggering.** The metadata (name + description) of every installed skill always sits in the agent's context. Past roughly 6 to 7 skills per agent, context gets crowded and cross-skill mis-triggering starts (two skills both feel summoned).
-2. **Role cohesion.** Skills used together in ONE workflow belong on the same agent (review code, then deploy, then debug is one engineer's breath; content calendar, then production, then edit is one content team's breath). Splitting them forces expensive handoffs.
+2. **Role cohesion.** Skills used together in ONE workflow belong on the same agent (review code, then deploy, then debug is one engineer's continuous flow; content calendar, then production, then edit is one content team's continuous flow). Splitting them forces expensive handoffs.
 3. **Separation of concerns.** Healthy roles are deliberately kept apart: an editor editing their own writing loses distance; an auditor auditing their own work loses credibility. The PM and auditor are intentionally not given implementation skills.
 4. **Sensitive data.** Agents that hold payroll, tax, and employee data (Finance, People) are separated from agents that talk to the public and clients (Marketing, Sales), so context leaking between conversations is impossible by design.
 
@@ -46,7 +46,7 @@ An Indonesian version of this document is at [AGENTS.id.md](./AGENTS.id.md).
 ### 5. FINANCE, money in, money out, and obligations
 **Skills (2):** `finance-analyst`, `accounting-core`
 **Job:** daily bookkeeping to monthly closing to analysis (runway, unit economics, pricing) to the tax calendar.
-**Note:** these two are one breath (record first, analyze later) but two hats. The skill descriptions already exclude each other, so they are safe on one agent. Hard rule: tax figures are always draft-until-verified.
+**Note:** these two are one continuous flow (record first, analyze later) but two hats. The skill descriptions already exclude each other, so they are safe on one agent. Hard rule: tax figures are always draft-until-verified.
 
 ### 6. GROWTH, the brand's public voice
 **Skills (4):** `marketing-growth`, `social-media-specialist`, `content-creator`, `content-editor`
