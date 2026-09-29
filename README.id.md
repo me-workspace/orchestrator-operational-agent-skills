@@ -8,9 +8,9 @@
 ![Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-8b5cf6)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-f59e0b)
 
-Sebuah **Skill** adalah folder berisi file `SKILL.md`: prosedur terfokus dan bisa dipakai ulang yang dimuat agen hanya saat relevan. Repo ini kumpulan kurasi skill semacam itu, ditulis mengikuti [standar terbuka Agent Skills](https://github.com/anthropics/skills) dari Anthropic, jadi bisa langsung dipasang di Claude Code, Claude Agent SDK, atau runtime agen apa pun yang membaca `SKILL.md`.
+Sebuah **Skill** adalah folder berisi file `SKILL.md`: prosedur terfokus dan bisa dipakai ulang yang dimuat agent hanya saat relevan. Repo ini kumpulan kurasi skill semacam itu, ditulis mengikuti [standar terbuka Agent Skills](https://github.com/anthropics/skills) dari Anthropic, jadi bisa langsung dipasang di Claude Code, Claude Agent SDK, atau runtime agent apa pun yang membaca `SKILL.md`.
 
-Ini lebih dari sekadar tumpukan prompt. Tiap skill adalah checklist, rubrik, atau pohon keputusan dengan quality gate, dan [`AGENTS.md`](./AGENTS.md) menunjukkan cara menyusunnya jadi perusahaan 8 agen (COO plus tujuh spesialis) tanpa skill saling berebut konteks.
+Ini lebih dari sekadar tumpukan prompt. Tiap skill adalah checklist, rubrik, atau pohon keputusan dengan quality gate, dan [`AGENTS.md`](./AGENTS.md) menunjukkan cara menyusunnya jadi perusahaan 8 agent (COO plus tujuh spesialis) tanpa skill saling berebut konteks.
 
 ---
 
@@ -20,7 +20,7 @@ Ini lebih dari sekadar tumpukan prompt. Tiap skill adalah checklist, rubrik, ata
 - **Deskripsi kaya pemicu.** Tiap `SKILL.md` menyatakan persis kapan harus menyala, dan kapan TIDAK, sehingga salah-trigger berkurang saat banyak skill terpasang.
 - **Hemat konteks.** Hanya name dan description yang duduk di konteks; body dimuat saat dibutuhkan. Pasang belasan skill tanpa membanjiri jendela konteks.
 - **Jujur secara desain.** Skill yang menyentuh pajak, hukum, atau uang membawa aturan draft-until-verified di dalam skill itu sendiri.
-- **Portabel.** Kalau agen Anda bisa membaca `SKILL.md`, ia bisa memakai skill ini.
+- **Portabel.** Kalau agent Anda bisa membaca `SKILL.md`, ia bisa memakai skill ini.
 
 ---
 
@@ -37,9 +37,9 @@ cp -r marketing-growth  /path/ke/project-anda/.claude/skills/
 cp -r prd-creator project-timeline-creator strategic-approach admin-ops  ~/.claude/skills/
 ```
 
-Saat berikutnya ada permintaan yang cocok ("tulis campaign brief", "buat PRD", "review diff ini"), agen memuat skill-nya otomatis.
+Saat berikutnya ada permintaan yang cocok ("tulis campaign brief", "buat PRD", "review diff ini"), agent memuat skill-nya otomatis.
 
-> Jangan pasang semua 25 ke satu agen. Metadata tiap skill yang terpasang tetap duduk di konteks. Pilih loadout per peran. Lihat [`AGENTS.md`](./AGENTS.md) untuk desain lengkapnya.
+> Jangan pasang semua 25 ke satu agent. Metadata tiap skill yang terpasang tetap duduk di konteks. Pilih loadout per peran. Lihat [`AGENTS.md`](./AGENTS.md) untuk desain lengkapnya.
 
 ---
 
@@ -59,7 +59,7 @@ Saat berikutnya ada permintaan yang cocok ("tulis campaign brief", "buat PRD", "
 | [`incident-debugging`](./incident-debugging) | Debugging produksi: evidence-first, hipotesis diskriminatif, fix minimal, write-up |
 | [`uiux-engineer`](./uiux-engineer) | UI/UX engineering: lima state wajib, forms, responsive, aksesibilitas, usability review |
 | [`product-designer`](./product-designer) | Mata desainer: hierarki, tipografi, warna, spacing system, design system, critique |
-| [`agent-skill-author`](./agent-skill-author) | Meta-skill: menulis dan mengaudit skill agen lain terhadap quality bar 12 poin |
+| [`agent-skill-author`](./agent-skill-author) | Meta-skill: menulis dan mengaudit skill agent lain terhadap quality bar 12 poin |
 | [`tech-scout`](./tech-scout) | Radar teknologi: source sweep, rubrik 6 dimensi, hype immunity, CVE dan EOL watch |
 
 ### Operasional
@@ -76,11 +76,11 @@ Saat berikutnya ada permintaan yang cocok ("tulis campaign brief", "buat PRD", "
 | [`hr-officer`](./hr-officer) | Rekrutmen berbasis rubrik, onboarding 30 hari, performance, kasus sensitif, kompensasi |
 | [`hr-admin`](./hr-admin) | Payroll dan potongan wajib (draft-until-verified), cuti dan absensi, kontrak, compliance calendar |
 
-### Lintas-agen
+### Lintas-agent
 | Skill | Fungsi |
 |---|---|
-| [`coo-orchestrator`](./coo-orchestrator) | Leader agent: routing, mengawal rantai lintas-agen, ops pulse harian, review mingguan, eskalasi, accountability register |
-| [`continuous-learning`](./continuous-learning) | Baseline tiap agen: klasifikasi fakta busuk-cepat dengan verifikasi wajib, belajar dari koreksi, review pengetahuan terjadwal, aturan kejujuran |
+| [`coo-orchestrator`](./coo-orchestrator) | Leader agent: routing, mengawal rantai lintas-agent, ops pulse harian, review mingguan, eskalasi, accountability register |
+| [`continuous-learning`](./continuous-learning) | Baseline tiap agent: klasifikasi fakta busuk-cepat dengan verifikasi wajib, belajar dari koreksi, review pengetahuan terjadwal, aturan kejujuran |
 
 > Skill pajak dan kepatuhan (`accounting-core`, `hr-admin`, `hr-officer`) memuat spesifik yang berorientasi Indonesia dan berstatus draft-until-verified terhadap regulasi tahun berjalan atau profesional berlisensi. Sesuaikan dengan yurisdiksi Anda.
 
@@ -88,7 +88,7 @@ Saat berikutnya ada permintaan yang cocok ("tulis campaign brief", "buat PRD", "
 
 ## Susun jadi satu tim
 
-[`AGENTS.md`](./AGENTS.md) adalah desain lengkap: skill mana di agen mana, kenapa peran dipisah seperti itu (auditor tidak mengaudit pekerjaannya sendiri; data finance terisolasi dari agen yang menghadap publik), dan cara menjalankannya sehari-hari. Ada juga opsi ramping 5 agen. (Versi Indonesia: [AGENTS.id.md](./AGENTS.id.md).)
+[`AGENTS.md`](./AGENTS.md) adalah desain lengkap: skill mana di agent mana, kenapa peran dipisah seperti itu (auditor tidak mengaudit pekerjaannya sendiri; data finance terisolasi dari agent yang menghadap publik), dan cara menjalankannya sehari-hari. Ada juga opsi ramping 5 agent. (Versi Indonesia: [AGENTS.id.md](./AGENTS.id.md).)
 
 ## Cara skill bekerja
 

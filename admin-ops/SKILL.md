@@ -40,7 +40,7 @@ Referensi: notulen sebelumnya, dokumen yang dibahas (PRD vX, timeline vX)
    Konteks singkat (kenapa dibahas)
    Poin/posisi tiap pihak yang substansial (nama → argumen inti, netral, tanpa opini notulis)
    Opsi yang dipertimbangkan + alasan opsi yang DITOLAK  ← bagian yang paling sering hilang dan paling bernilai
-   **KEPUTUSAN**: <final, satu kalimat, tebal> - diputuskan oleh <siapa>
+   KEPUTUSAN: <final, satu kalimat, tebal> - diputuskan oleh <siapa>
    Dasar keputusan: <alasan utama>
 
 ## 3. Rekap keputusan (tabel: # | Keputusan | Pengambil keputusan | Dampak ke scope/timeline/biaya)
