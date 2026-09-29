@@ -8,7 +8,7 @@
 ![Claude Code](https://img.shields.io/badge/works%20with-Claude%20Code-8b5cf6)
 ![PRs welcome](https://img.shields.io/badge/PRs-welcome-f59e0b)
 
-A **Skill** is a folder with a `SKILL.md` file: a focused, reusable procedure an AI agent loads only when it is relevant. This repo is a curated set of them, written to the [Anthropic Agent Skills](https://agentskills.io) spec, so they drop into Claude Code, the Claude Agent SDK, or any agent runtime that reads `SKILL.md`.
+A **Skill** is a folder with a `SKILL.md` file: a focused, reusable procedure an AI agent loads only when it is relevant. This repo is a curated set of them, written to Anthropic's [Agent Skills](https://github.com/anthropics/skills) open standard, so they drop into Claude Code, the Claude Agent SDK, or any agent runtime that reads `SKILL.md`.
 
 It is more than a pile of prompts. Every skill is a checklist, rubric, or decision tree with quality gates, and [`AGENTS.md`](./AGENTS.md) shows how to compose them into an 8-agent company (COO plus seven specialists) without the skills fighting each other for context.
 
